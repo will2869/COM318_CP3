@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Keep Orbit Open</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      color: #172033;
+      background: #f5f7fb;
+    }
+
+    header {
+      background: linear-gradient(135deg, #071225, #17345f);
+      color: white;
+      padding: 70px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: clamp(2.2rem, 6vw, 4.5rem);
+      margin-bottom: 18px;
+      letter-spacing: -1px;
+    }
+
+    header p {
+      max-width: 760px;
+      margin: 0 auto 30px;
+      font-size: 1.2rem;
+      color: #dce8ff;
+    }
+
+    .button {
+      display: inline-block;
+      background: #61d4ff;
+      color: #071225;
+      padding: 14px 24px;
+      border-radius: 999px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      background: #8de1ff;
+    }
+
+    nav {
+      background: white;
+      border-bottom: 1px solid #dde4ef;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav .nav-inner {
+      max-width: 1050px;
+      margin: auto;
+      padding: 14px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    nav strong {
+      color: #17345f;
+    }
+
+    nav a {
+      color: #172033;
+      text-decoration: none;
+      margin-left: 16px;
+      font-size: 0.95rem;
+    }
+
+    main {
+      max-width: 1050px;
+      margin: 0 auto;
+      padding: 42px 20px;
+    }
+
+    section {
+      margin-bottom: 46px;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 16px;
+      color: #10284a;
+    }
+
+    .intro-card,
+    .cta-card {
+      background: white;
+      padding: 30px;
+      border-radius: 22px;
+      box-shadow: 0 12px 35px rgba(23, 52, 95, 0.08);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 24px;
+      border-radius: 18px;
+      box-shadow: 0 8px 25px rgba(23, 52, 95, 0.07);
+    }
+
+    .card h3 {
+      color: #17345f;
+      margin-bottom: 10px;
+    }
+
+    .stat-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 22px;
+    }
+
+    .stat {
+      background: #eaf4ff;
+      padding: 22px;
+      border-radius: 18px;
+      text-align: center;
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 2rem;
+      color: #10284a;
+      margin-bottom: 6px;
+    }
+
+    .solution-list {
+      margin-top: 16px;
+      padding-left: 20px;
+    }
+
+    .solution-list li {
+      margin-bottom: 10px;
+    }
+
+    .cta-card {
+      background: #10284a;
+      color: white;
+      text-align: center;
+    }
+
+    .cta-card h2 {
+      color: white;
+    }
+
+    .cta-card p {
+      max-width: 720px;
+      margin: 0 auto 24px;
+      color: #dce8ff;
+    }
+
+    .sources {
+      font-size: 0.95rem;
+      color: #4b5870;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      color: #5b667a;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 800px) {
+      nav .nav-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      nav a {
+        margin: 0 12px 0 0;
+      }
+
+      .grid,
+      .stat-row {
+        grid-template-columns: 1fr;
+      }
+
+      header {
+        padding: 56px 18px;
+      }
+
+      .intro-card,
+      .cta-card,
+      .card {
+        padding: 22px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Keep Orbit Open</h1>
+    <p>
+      Satellites should keep expanding, but growth must be paired with dedicated, enforceable funding for space debris cleanup.
+    </p>
+    <a class="button" href="#act">Support orbital cleanup funding</a>
+  </header>
+
+  <nav>
+    <div class="nav-inner">
+      <strong>Space Debris Campaign</strong>
+      <div>
+        <a href="#problem">Problem</a>
+        <a href="#views">Viewpoints</a>
+        <a href="#solution">Solution</a>
+        <a href="#act">Act</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section id="problem" class="intro-card">
+      <h2>The problem is not satellites. The problem is unmanaged debris.</h2>
+      <p>
+        Space debris is the growing cloud of disabled satellites, rocket bodies, paint flecks, and other fragments orbiting Earth. These objects can collide, break apart, and create even more fragments, making future missions harder and more expensive.
+      </p>
+
+      <div class="stat-row">
+        <div class="stat">
+          <strong>1.2M+</strong>
+          <span>estimated objects larger than 1 cm</span>
+        </div>
+        <div class="stat">
+          <strong>40,000</strong>
+          <span>tracked objects in orbit</span>
+        </div>
+        <div class="stat">
+          <strong>11,000</strong>
+          <span>active satellites and spacecraft</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="views">
+      <h2>Three sides of the debate</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Innovation first</h3>
+          <p>
+            One viewpoint emphasizes the benefits of large satellite constellations and argues that strict limits could slow innovation, reduce access, and raise costs.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Safety first</h3>
+          <p>
+            A second viewpoint argues that the current launch pace is making orbital safety harder to manage, so stronger enforcement is needed.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Fairness first</h3>
+          <p>
+            A third viewpoint focuses on who should pay, who should set standards, and whether a “polluter pays” model can realistically work in space.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="solution" class="intro-card">
+      <h2>Our position</h2>
+      <p>
+        Satellite growth should continue, but expansion must be paired with predictable funding for active debris removal and long-term orbital cleanup. Best practices alone are not enough if they do not fund real remediation.
+      </p>
+      <ul class="solution-list">
+        <li>Fund debris remediation research and development.</li>
+        <li>Support demonstration missions for active debris removal.</li>
+        <li>Create incentives for private companies and nations to participate.</li>
+        <li>Make cleanup funding enforceable, not optional.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Why this matters to young engineers and technology users</h2>
+      <p>
+        U.S. residents ages 18–29, especially college students and early-career professionals in technology and engineering, are both users and future designers of space infrastructure. Communications, mapping, weather data, navigation, and research all depend on a safe orbital environment.
+      </p>
+      <p>
+        This campaign frames orbital cleanup as pro-innovation: protecting a shared resource so space technology can keep advancing.
+      </p>
+    </section>
+
+    <section id="act" class="cta-card">
+      <h2>Ask Congress to fund orbital cleanup.</h2>
+      <p>
+        Support predictable funding for debris remediation R&D, demonstration missions, and incentives that make cleanup participation realistic for companies and nations.
+      </p>
+      <a class="button" href="mailto:?subject=Support%20Space%20Debris%20Cleanup%20Funding&body=I%20support%20dedicated%20and%20enforceable%20funding%20for%20space%20debris%20cleanup%20so%20satellite%20innovation%20can%20continue%20without%20polluting%20Earth%20orbit.">Share the message</a>
+    </section>
+
+    <section class="sources">
+      <h2>Sources to include</h2>
+      <p>
+        ESA Space Environment Report, FCC post-mission disposal rule updates, and UNOOSA space debris mitigation guidelines.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    Built for a space debris awareness campaign focused on funding, safety, fairness, and continued innovation.
+  </footer>
+</body>
+</html>
